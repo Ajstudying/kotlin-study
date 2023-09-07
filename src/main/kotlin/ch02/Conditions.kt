@@ -5,10 +5,6 @@ fun main() {
     val a = 10
     val b = 20
 
-    //삼항연산 X
-    //if else 문의 식이 1개이면, 식의 결과가 반환값
-//    val max = (a > b) ? x : y
-    val max = if (a > b) a else b
     /*
     val result : Int
     if(a > b) {
@@ -29,6 +25,12 @@ fun main() {
     }else {
         "max is b : $b"
     })
+
+
+    //삼항연산 X
+    //if else 문의 식이 1개이면, 식의 결과가 반환값
+//    val max = (a > b) ? x : y
+    val max = if (a > b) a else b
 
     //when(switch-case 대신에)
     //break 구문이 필요가 없다.

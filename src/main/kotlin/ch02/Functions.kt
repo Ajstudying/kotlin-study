@@ -1,5 +1,7 @@
 package ch02
 
+import ch01.addAsterisk
+
 // fun 함수명(매개변수) : 반환타입 {...}
 // 글로벌 함수 => 메인에 가서도 사용 가능.
 // 클래스, 객체 내부에 있지 않은 함수
@@ -15,7 +17,7 @@ fun printInfo(firstName: String, lastname: String, age: Int){
     println("$firstName $lastname is $age years old.")
 }
 
-//vararg : 매개변수의 갯수가 variable하다. 매개변수가 가변인자 => 배열처럼 작동됨.
+//가변 인자(varargs) : 매개변수의 갯수가 variable하다. 매개변수가 가변인자 => 배열처럼 작동됨.
 fun sum(vararg numbers : Int ): Int {
     //가변인자는 배열처럼 인식됨.
     return numbers.sum()
@@ -52,4 +54,5 @@ fun main() {
     // HttClient.get(url : String) {} << 이렇게 사용 가능. 상속을 거칠 필요 없이 확장함수를 쓰면 된다.
     val str = "Hello"
     println(str.addExclamation())
+    println(str.addAsterisk())
 }

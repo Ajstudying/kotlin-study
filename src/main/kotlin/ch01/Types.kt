@@ -6,7 +6,11 @@ fun main() {
     intValue = 42
 //    val longValue : Long = 42
     val longValue : Long = 42L //이렇게 값을 명확하게 넣어주는게 좋다.
+    val intValue2 : Int = 42
 
+    if(intValue == intValue2) {
+        println(true)
+    }
     //변수의 메서드를 호출해서 자유롭게 형변환, 연산처리가 가능함.
     intValue.toLong().toString()
 
