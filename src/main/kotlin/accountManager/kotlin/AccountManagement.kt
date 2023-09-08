@@ -31,8 +31,8 @@ class Account(var accountNumber: String = "", var balance : Double = 0.0){
 object AccountManager {
     private var maxSize = 100
 
-//    private var accountList: Array<Account> = Array(maxSize) { Account() } 크기 설정시에
-    private var accountList = mutableListOf<Account>()
+    private var accountList: Array<Account> = Array(maxSize) { Account() } //크기 설정시에
+//    private var accountList = mutableListOf<Account>()
     private var numAccounts : Int = 0
 
     fun addAccount(accountNumber: String, balance: Double){
@@ -67,6 +67,12 @@ object AccountManager {
         }
     }
     fun findAccount(accountNumber: String) : Account? {
+//        var findedAccount: Account? = accountList.find{ accountNumber == it.accountNumber }
+//        if(findedAccount != null){
+//            return findedAccount
+//        }else {
+//            return null
+//        }
         for(account in accountList){
             if(account.accountNumber == accountNumber){
                 return account
